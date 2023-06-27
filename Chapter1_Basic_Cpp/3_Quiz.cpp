@@ -49,8 +49,33 @@ void mission3(){
 //      예를 들어 100만원 판매시 50(만원) + 100(만원)*0.12로 62(만원)을 받는다.
 //      단, 급여의 입력이 -1이 될 때까지 급여 계산이 반복되어야 한다. 
 
+void mission4(){
+    int basic = 50;
+    float ratio = 0.12;
+
+    while(true){
+        int sales = 0;
+        std::cout<<"Enter your sales benefit(-1 to end) = ";
+        std::cin>>sales;
+
+        if(sales == -1){
+            std::cout<<"Quit the Program"<<std::endl;
+            break;
+        };
+
+        double result = basic + sales * ratio;
+        std::cout<<"This month salary = "<<result<<std::endl;
+    }
+
+    float salary = 0;
+
+
+
+
+}
+
 
 int main(){
-    mission3();
+    mission4();
     return 0;
 }
