@@ -22,11 +22,11 @@ void Referen(){
     int &num2 = num1;
 
     num2 = 3040;
-    cout<<"VAL: "<<num1<<endl;
-    cout<<"REF: "<<num2<<endl;
 
-    cout<<"VAL: "<<&num1<<endl;
-    cout<<"REF: "<<&num2<<endl;
+    cout<<"VAL: "<<num1<<endl;      // 3040
+    cout<<"REF: "<<num2<<endl;      // 3040
+    cout<<"ADR VAL: "<<&num1<<endl; // 0x61ff08
+    cout<<"ADR REF: "<<&num2<<endl; // 0x61ff08
 }
 
 void ReArrElem(){
@@ -36,9 +36,9 @@ void ReArrElem(){
     int &ref2 = arr[1];
     int &ref3 = arr[2];
 
-    cout<<"ref1 : "<<ref1<<endl;
-    cout<<"ref2 : "<<ref2<<endl;
-    cout<<"ref3 : "<<ref3<<endl;
+    cout<<"ref1 : "<<ref1<<endl;    // 1
+    cout<<"ref2 : "<<ref2<<endl;    // 3
+    cout<<"ref3 : "<<ref3<<endl;    // 5
 }
 
 void RefPointer(){
@@ -74,6 +74,6 @@ void Call_by_ref(){
 }
 
 int main(){
-    Call_by_ref();
+    Referen(); // 일반 참조
     return 0;
 }
